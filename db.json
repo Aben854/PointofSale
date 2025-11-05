@@ -1,0 +1,10 @@
+{
+  "customers": [
+    { "id": 1, "name": "Alice", "email": "alice@example.com" },
+    { "id": 2, "name": "Bob", "email": "bob@example.com" }
+  ],
+  "orders": [
+    { "id": 1, "customerId": 1, "total": 75 },
+    { "id": 2, "customerId": 2, "total": 45 }
+  ]
+}

@@ -1,0 +1,8 @@
+{
+  "OrderId": "default-value",
+  "Success": true,
+  "Reason": "",
+  "AuthorizationToken": "dGhpcyBpcyBhbiBhdXRoIHRva2Vu",
+  "TokenExpirationDate": "2026-01-31T00:00:00.000",
+  "AuthorizedAmount": 0
+}

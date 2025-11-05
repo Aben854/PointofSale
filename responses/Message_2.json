@@ -1,0 +1,14 @@
+{
+  "TransactionNumber": "a16373ef-e953-4aa7-a8cc-33489fdcd22c",
+  "TransactionDateTime": "2023-09-12T09:45:37.865",
+  "ItemId": "005860917635",
+  "Location": "002",
+  "Quantity": 45,
+  "Status": "AVAILABLE",
+  "NextAvailabilityDate": null,
+  "TotalIncludingSubstituteItems": 1273.0,
+  "SubstituteItemsAvailable": false,
+  "SubstitutionDetails": null,
+  "FirstAvailableFutureQuantity": null,
+  "FirstAvailableFutureDate": null
+}

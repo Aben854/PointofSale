@@ -1,0 +1,26 @@
+<script>
+async function testPayment() {
+  try {
+    const response = await fetch("http://localhost:5000/authorize", {
+      method: "POST",
+      headers: {
+        "Content-Type": "application/json"
+      },
+      body: JSON.stringify({
+        OrderId: "ORD-1001",
+        RequestedAmount: 75
+      })
+    });
+
+    const data = await response.json();
+    console.log("API Response:", data);
+    document.body.innerHTML = "<pre>" + JSON.stringify(data, null, 2) + "</pre>";
+
+  } catch (err) {
+    console.error(err);
+    document.body.innerHTML = "<pre>Error: " + err.message + "</pre>";
+  }
+}
+</script>
+
+<button onclick="testPayment()">Send Payment</button>
