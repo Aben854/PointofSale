@@ -1,10 +1,62 @@
 {
-  "customers": [
-    { "id": 1, "name": "Alice", "email": "alice@example.com" },
-    { "id": 2, "name": "Bob", "email": "bob@example.com" }
-  ],
-  "orders": [
-    { "id": 1, "customerId": 1, "total": 75 },
-    { "id": 2, "customerId": 2, "total": 45 }
-  ]
+    "customers": [
+        {
+            "id": 1,
+            "name": "Alice",
+            "email": "alice@example.com"
+        },
+        {
+            "id": 2,
+            "name": "Bob",
+            "email": "bob@example.com"
+        }
+    ],
+    "orders": [
+        {
+            "id": 1,
+            "customerId": 1,
+            "total": 75
+        },
+        {
+            "id": 2,
+            "customerId": 2,
+            "total": 45
+        }
+    ],
+    "success": [
+        {
+            "OrderId": "default-value",
+            "Success": true,
+            "Reason": "",
+            "AuthorizationToken": "dGhpcyBpcyBhbiBhdXRoIHRva2Vu",
+            "TokenExpirationDate": "2026-01-31T00:00:00.000",
+            "AuthorizedAmount": 0
+        }
+    ],
+    "incorrectCard": [
+        {
+            "OrderId": "default-value",
+            "Success": false,
+            "Reason": "Card details incorrect or missing on card ending in XXXX",
+            "AuthorizationToken": null,
+            "TokenExpirationDate": null,
+            "AuthorizedAmount": 0
+        }
+    ],
+    "insufficientFunds": [
+        {
+            "OrderId": "default-value",
+            "Success": false,
+            "Reason": "Insufficient funds on card ending in XXXX",
+            "AuthorizationToken": null,
+            "TokenExpirationDate": null,
+            "AuthorizedAmount": 0
+        }
+    ],
+    "serverError": [
+        {
+            "Error": "Internal Server Error. Please see system admin for error resolution.",
+            "UUID": "00000000-0000-0000-0000-000000000000"
+        }
+    ]
 }
