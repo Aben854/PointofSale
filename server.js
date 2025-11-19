@@ -1,4 +1,3 @@
-// server.js
 const jsonServer = require('json-server');
 const path = require('path');
 
@@ -6,13 +5,15 @@ const server = jsonServer.create();
 const router = jsonServer.router('db.json');
 const middlewares = jsonServer.defaults({ static: "public" });
 
-// Enable JSON body parsing
+
 server.use(middlewares);
+server.get("/", (req, res) => {
+res.json({ message: "Mock API is running." });
+});
+
 server.use(jsonServer.bodyParser);
 
-/* ------------------------------------------------------------------
-   Rule 1: Require a name when creating a customer
------------------------------------------------------------------- */
+ /*Require a name when creating a customer*/
 server.post('/api/customers', (req, res, next) => {
   if (!req.body.name) {
     return res.status(400).json({ error: 'Customer name is required' });
