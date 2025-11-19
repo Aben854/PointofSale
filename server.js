@@ -1,10 +1,10 @@
 // server.js
 const jsonServer = require('json-server');
 const path = require('path');
-app.use(express.static('public'));
+
 const server = jsonServer.create();
 const router = jsonServer.router('db.json');
-const middlewares = jsonServer.defaults();
+const middlewares = jsonServer.defaults({ static: "public" });
 
 // Enable JSON body parsing
 server.use(middlewares);
